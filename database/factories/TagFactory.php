@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use Illuminate\Support\Str;
 class TagFactory extends Factory
 {
     /**
@@ -22,7 +22,7 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=> $this ->faker->text(rand(10, 15)),
         ];
     }
 }

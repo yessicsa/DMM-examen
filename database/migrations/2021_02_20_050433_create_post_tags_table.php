@@ -18,7 +18,7 @@ class CreatePostTagsTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->longText('descripcion');
-            $table->string('image');
+            
             //declarar llaves foraneas dentro de la migracion
             $table->unsignedBigInteger('tag_id');
             $table->foreign('tag_id')->references('id')->on('tags');

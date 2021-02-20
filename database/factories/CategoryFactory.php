@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use App\Models\category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
 
 class CategoryFactory extends Factory
 {
@@ -22,6 +24,13 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
+            'name' => $this->faker->text(rand(10, 15)),
+            'descripcion' => $this->faker->text(100, 200),
+            'image' => $this->faker->imageUrl(1280, 720),
+
+            
+
+
             //
         ];
     }

@@ -22,10 +22,8 @@ class CreatePostsTable extends Migration
             //declarar llaves foraneas 
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('post_tag_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('post_tag_id')->references('id')->on('post_tag');
             $table->timestamps();
 
         });
